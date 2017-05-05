@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23c7216c-4ca7-412c-9a45-2ec37f2472dc" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.env" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bunyanConfig.js" />
@@ -9,6 +10,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/helpers/sql/postgresConfig.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/helpers/sql/sql_func.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+=======
+>>>>>>> 27f1e41ab9e8c6ca1377bfd9c8e50372837cce7a
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/tests.js" afterPath="$PROJECT_DIR$/routes/tests.js" />
     </list>
@@ -58,6 +61,7 @@
       <file leaf-file-name="tests.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/tests.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="135">
               <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
@@ -103,6 +107,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
               <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+=======
+            <state relative-caret-position="75">
+              <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="14" />
+>>>>>>> 27f1e41ab9e8c6ca1377bfd9c8e50372837cce7a
               <folding />
             </state>
           </provider>
@@ -348,13 +356,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493967868396</updated>
+<<<<<<< HEAD
       <workItem from="1493967869572" duration="1036000" />
       <workItem from="1493969214821" duration="1270000" />
+=======
+      <workItem from="1493967869572" duration="1372000" />
+>>>>>>> 27f1e41ab9e8c6ca1377bfd9c8e50372837cce7a
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="2306000" />
+=======
+    <option name="totallyTimeSpent" value="1372000" />
+>>>>>>> 27f1e41ab9e8c6ca1377bfd9c8e50372837cce7a
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="823" extended-state="6" />
@@ -519,6 +535,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/tests.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
@@ -561,6 +578,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+=======
+        <state relative-caret-position="75">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="14" />
+>>>>>>> 27f1e41ab9e8c6ca1377bfd9c8e50372837cce7a
           <folding />
         </state>
       </provider>
