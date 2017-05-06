@@ -7,7 +7,7 @@ var QueryFile = require('pg-promise').QueryFile;
 var path = require('path');
 
 function sql(file) {
-    var relativePath = '.../helpers/sql/account/';
+    var relativePath = '../helpers/sql/account/';
     return new QueryFile(relativePath+file, {minify: true});
 }
 module.exports = {
