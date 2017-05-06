@@ -80,8 +80,5 @@ module.exports = {
         dbProp : function(){
             return db1;
         }
-
-
-
     }
 };

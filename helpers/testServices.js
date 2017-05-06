@@ -27,6 +27,7 @@ var getAccountsForSF = function(limit){
 module.exports={
     getAccounts: function (req, res, next) {
         return new Promise(function (resolve, reject) {
+
             if (req.params.limit && req.params.limit != null) {
                 getAccountsForSF(req.params.limit).then(function (scriptResponse) {
                     log.info('@@@@@ scriptResponse' + scriptResponse);
@@ -48,7 +49,25 @@ module.exports={
                 });
             }
             else {
-                log.info('Please enter a valid limit');
+                //log.info('Please enter a valid limit');
+                getAccountsForSF(10).then(function (scriptResponse) {
+                    log.info('@@@@ scriptResponse' + scriptResponse);
+                    res.contentType('text/javascript');
+                    var responseObj = {isError: false, errorMessage: '', status: 200, response: scriptResponse};
+                    log.info('@@@@ return successful');
+                    res.send(responseObj);
+                    resolve(responseObj);
+                }).catch(function (error) {
+                    log.error(error);
+                    var responseObj = {
+                        isError: true,
+                        errorMessage: 'Internal Server Error - ' + JSON.stringify(err),
+                        status: 500,
+                        response: []
+                    };
+                    res.send(responseObj);
+                    reject(responseObj);
+                });
             }
         })
     },
