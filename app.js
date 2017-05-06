@@ -44,4 +44,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var BulkApiServices = require('./helpers/BulkApiServices');
+var testServices =require('./helpers/testServices');
+//BulkApiServices.bulkDeleteAndInsertBookingRules();
+
 module.exports = app;

@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-    res.end('demo');
-});
+/* GET home page. */
+var testServices = require('../helpers/testServices');
+
+router.get('/account/:limit',testServices.getAccounts);
+
 
 module.exports = router;
