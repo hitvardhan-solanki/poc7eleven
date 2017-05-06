@@ -52,9 +52,9 @@ module.exports={
             }
         })
     },
-    inserttestData:function () {
+    inserttestData:function (numberOfRecords) {
         var testArray= new Array();
-        for(var i=0;i<250;i++){
+        for(var i=0;i<numberOfRecords;i++){
             var test ={}
             test.Name = "DummyData-"+ i;
             testArray.push(test);

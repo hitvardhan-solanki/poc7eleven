@@ -47,5 +47,5 @@ app.use(function(err, req, res, next) {
 var BulkApiServices = require('./helpers/BulkApiServices');
 var testServices =require('./helpers/testServices');
 //BulkApiServices.bulkDeleteAndInsertBookingRules();
-
+//testServices.inserttestData(50);
 module.exports = app;

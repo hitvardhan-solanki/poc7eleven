@@ -1,1 +1,1 @@
-select Name,Id,sfid from account LIMIT $1
+select name from public.testtable LIMIT $1
