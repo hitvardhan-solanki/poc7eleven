@@ -32,7 +32,7 @@ module.exports={
                     log.info('@@@@@ scriptResponse' + scriptResponse);
                     res.contentType('text/javascript');
                     var responseObj = {isError: false, errorMessage: '', status: 200, response: scriptResponse};
-                    log.info('@@@ return successful for script B');
+                    log.info('@@@ return successful');
                     res.send(responseObj);
                     resolve(responseObj);
                 }).catch(function (err) {
