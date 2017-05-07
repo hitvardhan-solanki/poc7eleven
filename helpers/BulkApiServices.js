@@ -14,7 +14,7 @@ conn.bulk.pollTimeout = 600000; // 60 sec
 
 var createDummyStudents = function () {
     var StudentArray= [];
-    for(var i=0;i<10000;i++){
+    for(var i=0;i<10;i++){
         var student ={}
         student.Name = "student "+ i;
         StudentArray.push(student);
@@ -46,7 +46,10 @@ module.exports = {
                         for(var pos = 0 ; pos <result.records.length; pos++) {
                             //pusing the complete object of record in the array
                             //console.log(result.records[pos]);
-                            StundentDelete.push(result.records[pos]);
+                            var student={};
+                            student.Id=result.records[pos];
+
+                            StundentDelete.push(student);
                         }
                     });
 
@@ -70,12 +73,22 @@ module.exports = {
                 });
 
         });
+    },
+    bulkDeleteBookingRules : function () {
+        return new Promise(function (resolve, reject) {
+            conn.login('hitvardhan.solanki@appirio.com.trainingss', 'Appirio@123seqDYdtQjlzKXg2QAOWraG2g', function (err, userInfo) {
+                if (err) {
+                    return console.error(err);
+                }
+                conn.query("SELECT Id FROM Student__c WHERE CreatedDate != TODAY")
+                    .destroy('Student__c', function (err, rets) {
+                        if (err) {
+                            return console.error(err);
+                        }
+                        console.log(rets);
+                        // ...
+                    });
+            });
+        });
     }
-
 }
-// conn.query("SELECT Id FROM Account WHERE CreatedDate = TODAY")
-//     .destroy('Account', function(err, rets) {
-//         if (err) { return console.error(err); }
-//         console.log(rets);
-//         // ...
-//     });
