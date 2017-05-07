@@ -74,3 +74,9 @@ module.exports = {
     }
 
 }
+// conn.query("SELECT Id FROM Account WHERE CreatedDate = TODAY")
+//     .destroy('Account', function(err, rets) {
+//         if (err) { return console.error(err); }
+//         console.log(rets);
+//         // ...
+//     });
