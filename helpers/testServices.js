@@ -34,7 +34,7 @@ module.exports={
                     var responseObj = {isError: false, errorMessage: '', status: 200, response: scriptResponse};
                     log.info('@@@ return successful');
                     //res.send(responseObj);
-                    res.render('account',{listOfRecords: responseObj});
+                    res.render('account',{listOfRecords: responseObj.response});
                     resolve(responseObj);
                 }).catch(function (err) {
                     log.error(err);
