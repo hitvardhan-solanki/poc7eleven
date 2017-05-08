@@ -1,5 +1,6 @@
 extends layout
 
 block content
-    each item in #{listOfRecords}
-        li= item
+    ul
+        each val in listOfRecords
+            li= val
