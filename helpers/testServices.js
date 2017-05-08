@@ -23,18 +23,21 @@ var getAccountsForSF = function(limit){
     });
 }
 
-
+var DataBaseArray = [];
 module.exports={
     getAccounts: function (req, res, next) {
         return new Promise(function (resolve, reject) {
             if (req.params.limit && req.params.limit != null) {
                 getAccountsForSF(req.params.limit).then(function (scriptResponse) {
                     log.info('@@@@@ scriptResponse' + scriptResponse);
-                    res.contentType('text/javascript');
+                    res.contentType('text/html');
                     var responseObj = {isError: false, errorMessage: '', status: 200, response: scriptResponse};
                     log.info('@@@ return successful');
-                    res.send(scriptResponse[0].name);
-                    //res.render('account',{listOfRecords: scriptResponse.});
+                    //res.send(scriptResponse[0].name);
+                    for(var i= 0; i< scriptResponse.length; i++){
+                        DataBaseArray.push(scriptResponse[i]);
+                    }
+                    res.render('account',{listOfRecords: DataBaseArray});
                     resolve(responseObj);
                 }).catch(function (err) {
                     log.error(err);
