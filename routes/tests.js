@@ -5,6 +5,7 @@ var router = express.Router();
 var testServices = require('../helpers/testServices');
 
 router.get('/account/:limit',testServices.getAccounts);
+router.render('account',{listOfRecords: testServices.getAccounts})
 
 
 module.exports = router;

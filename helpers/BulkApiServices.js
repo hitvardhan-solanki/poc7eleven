@@ -44,11 +44,8 @@ module.exports = {
                         console.log("fetched : " + result.records.length);
                         //for loop to create the array fot deleting the students' records
                         for(var pos = 0 ; pos <result.records.length; pos++) {
-                            //pusing the complete object of record in the array
-                            //console.log(result.records[pos]);
                             var student={};
                             student.Id=result.records[pos];
-
                             StundentDelete.push(student);
                         }
                     });
@@ -80,7 +77,7 @@ module.exports = {
                 if (err) {
                     return console.error(err);
                 }
-                conn.query("SELECT Id FROM Student__c WHERE CreatedDate != TODAY")
+                conn.query("SELECT Id FROM Student__c WHERE CreatedDate != TODAY AND LastModifiedDate != TODAY")
                     .destroy('Student__c', function (err, rets) {
                         if (err) {
                             return console.error(err);

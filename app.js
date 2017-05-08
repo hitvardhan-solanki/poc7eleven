@@ -8,6 +8,10 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var tests = require('./routes/tests');
+
+var BulkApiServices = require('./helpers/BulkApiServices');
+var testServices = require('./helpers/testServices');
+
 var app = express();
 
 // view engine setup
@@ -44,8 +48,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-var BulkApiServices = require('./helpers/BulkApiServices');
-var testServices =require('./helpers/testServices');
 BulkApiServices.bulkDeleteBookingRules();
-
+//testServices.inserttestData(10);
 module.exports = app;
