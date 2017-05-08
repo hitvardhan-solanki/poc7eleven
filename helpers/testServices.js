@@ -33,7 +33,7 @@ module.exports={
                     res.contentType('text/javascript');
                     var responseObj = {isError: false, errorMessage: '', status: 200, response: scriptResponse};
                     log.info('@@@ return successful');
-                    res.send(scriptResponse.name);
+                    res.send(scriptResponse[0].name);
                     //res.render('account',{listOfRecords: scriptResponse.});
                     resolve(responseObj);
                 }).catch(function (err) {
