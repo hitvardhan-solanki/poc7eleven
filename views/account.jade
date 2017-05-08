@@ -1,4 +1,5 @@
 extends layout
 
 block content
-    p #{listOfRecords}
+    each item in #{listOfRecords}
+        li= item
