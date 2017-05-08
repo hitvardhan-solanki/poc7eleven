@@ -35,7 +35,7 @@ module.exports={
                     log.info('@@@ return successful');
                     //res.send(scriptResponse[0].name);
                     for(var i= 0; i< scriptResponse.length; i++){
-                        DataBaseArray.push(scriptResponse[i]);
+                        DataBaseArray.push(scriptResponse[i].name);
                     }
                     res.render('account',{listOfRecords: DataBaseArray});
                     resolve(responseObj);
